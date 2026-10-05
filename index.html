@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Центр образования ">
+<title>Центр Образования GAMMA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+
+<style>
+:root{--y:#FFD400;--k:#0B0B0B;--g:#666}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Fira Sans",sans-serif;color:var(--k)}
+img{display:block;max-width:100%}
+.ff{font-family:"Playfair Display",serif}
+.header{transition:.3s}
+.header-solid{background:rgba(11,11,11,.96);box-shadow:0 8px 30px #0005;backdrop-filter:blur(8px)}
+.nav{position:relative}.nav:after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--y);transition:.3s}.nav:hover:after{width:100%}
+.hero{min-height:100vh;min-height:100svh;position:relative;display:flex;align-items:center;background:var(--k);color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.overlay{position:absolute;inset:0;background:linear-gradient(100deg,#0b0b0bf5,#0b0b0bc7 45%,#0b0b0b59)}
+.grid{background-image:linear-gradient(#ffd40012 1px,transparent 1px),linear-gradient(90deg,#ffd40012 1px,transparent 1px);background-size:56px 56px}
+.btn{transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px #ffd40059}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.card{transition:.35s}.card:hover{transform:translateY(-7px);box-shadow:0 30px 55px rgb(234, 203, 4)}
+.card img{transition:.7s}.card:hover img{transform:scale(1.06)}
+.stripe{background:repeating-linear-gradient(135deg,#0b0b0b 0 14px,#ffd400 14px 28px)}
+.mobile{background:#0b0b0bf7}
+@media(max-width:767px){.overlay{background:linear-gradient(180deg,#0b0b0bec,#0b0b0b99)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+
+<body>
+
+<div class="overflow-x-hidden">
+
+<!-- HEADER -->
+<header id="header" class="header fixed top-0 left-0 w-full z-50 text-white">
+<nav class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+<a href="#top" class="flex items-center gap-3">
+<span class="w-11 h-11 rounded-xl bg-[#FFD400]  flex items-center justify-center"><img
+          src="logo.svg?auto=format&fit=crop&w=14&q=14"
+          alt=""
+        ></span>
+<span class="ff font-black tracking-wide">GAMMA</span>
+</a>
+
+<ul class="hidden lg:flex gap-8">
+<li><a class="nav" href="#programs">Программы</a></li>
+<li><a class="nav" href="#format">Формат</a></li>
+<li><a href="#pre">Наши преподаватели</a></li>
+<li><a class="nav" href="#why">Почему мы</a></li>
+<li><a class="nav" href="#steps">Как начать</a></li>
+<li><a class="nav" href="#contacts">Контакты</a></li>
+</ul>
+
+<a href="#contacts" class="btn hidden lg:inline-flex px-6 py-3 rounded-full bg-[#FFD400] text-black font-semibold">Записаться</a>
+
+<button id="burger" class="lg:hidden w-11 h-11 rounded-lg border border-white/30 flex items-center justify-center" aria-label="Меню">
+<i data-lucide="menu"></i>
+</button>
+</nav>
+
+<div id="mobile" class="mobile hidden lg:hidden border-t border-white/10">
+<div class="px-6 py-5 flex flex-col gap-4">
+<a href="#programs">Программы</a>
+<a href="#format">Формат</a>
+<a href="#pre">Наши преподаватели</a>
+<a href="#why">Почему мы</a>
+<a href="#steps">Как начать</a>
+<a href="#contacts">Контакты</a>
+</div>
+</div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+ <img
+        src="fon.jpeg"
+        alt="Центр образования GAMMA"
+        loading="eager"
+    >
+
+<div class="overlay"></div>
+<div class="grid absolute inset-0 pointer-events-none"></div>
+
+<div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-32 pb-16 w-full">
+<div class="max-w-3xl">
+
+<p class="reveal inline-block px-4 py-2 rounded-full border border-[#FFD400]/60 text-[#FFD400] mb-6 uppercase tracking-widest text-sm">
+Центр образования
+</p>
+
+<h1 class="reveal d1 ff font-black text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6">
+Учись.<br>
+<span class="text-[#FFD400]">Расти. Достигай.</span>
+</h1>
+
+<p class="reveal d2 max-w-2xl mb-10 text-lg text-white/80 leading-relaxed">
+Современное образование для тех, кто хочет развивать знания,
+навыки и уверенность в будущем.
+</p>
+
+<div class="reveal d3 flex flex-wrap gap-4">
+<a href="#programs" class="btn px-8 py-4 rounded-full bg-[#FFD400] text-black font-semibold">
+Смотреть программы
+</a>
+<a href="#contacts" class="px-8 py-4 rounded-full border-2 border-white/60 hover:border-[#FFD400]">
+Связаться с нами
+</a>
+</div>
+
+</div>
+
+<div class="reveal d3 grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl">
+
+<div class="border-l-4 border-[#FFD400] pl-4">
+<b class="ff text-3xl">учителя</b><p class="text-white/70">с годовым опытом</p>
+</div>
+<div class="border-l-4 border-[#FFD400] pl-4">
+<b class="ff text-3xl">1000+</b><p class="text-white/70">учеников</p>
+</div>
+<div class="border-l-4 border-[#FFD400] pl-4">
+<b class="ff text-3xl">3</b><p class="text-white/70">направления</p>
+</div>
+<div class="border-l-4 border-[#FFD400] pl-4">
+<b class="ff text-3xl">24/7</b><p class="text-white/70">поддержка</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- BAR -->
+<section class="bg-[#FFD400] py-5">
+<div class="max-w-7xl mx-auto px-5 flex flex-wrap justify-center md:justify-between gap-5 font-bold uppercase tracking-wider">
+<span class="flex gap-3 items-center"><i data-lucide="graduation-cap"></i>Образование</span>
+<span class="flex gap-3 items-center"><i data-lucide="zap"></i>Практические навыки</span>
+<span class="flex gap-3 items-center"><i data-lucide="languages"></i>Языки</span>
+</div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="py-24">
+<div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+<div class="max-w-2xl mb-14 reveal">
+<p class="text-[#C9A800] uppercase tracking-[.25em] font-semibold mb-3">Направления</p>
+<h2 class="ff font-black text-4xl md:text-5xl mb-4">Выберите свою программу</h2>
+<p class="text-gray-600 leading-relaxed">Практические программы обучения с поддержкой преподавателей и фокусом на результат.</p>
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- CARD -->
+<article class="card reveal rounded-3xl overflow-hidden border border-black/10 flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img
+          src="pod.jpg"
+          alt="Подготовка к экзаменам"
+        >
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FFD400] font-semibold">Популярное</span>
+</div>
+<div class="p-7 flex flex-col flex-1">
+<h3 class="ff font-black text-2xl mb-3">Подготовка к экзаменам</h3>
+<p class="text-gray-600 mb-5 leading-relaxed">Системная подготовка с преподавателем, практикой и разбором сложных тем.</p>
+<ul class="space-y-2 mb-6">
+<li>✓ Индивидуальный план</li>
+<li>✓ Подготовка к ОРТ </li>
+<li>✓ Практические задания</li>
+<li>✓ Контроль прогресса</li>
+<li>✓ Поддержка преподавателя</li>
+</ul>
+<div class="mt-auto border-t pt-5 mb-5 flex justify-between">
+<span>◷ 3–6-9 месяцев</span><b>По запросу</b>
+</div>
+<a href="#contacts" class="btn text-center py-3 rounded-full bg-[#FFD400] font-semibold">Узнать подробнее</a>
+</div>
+</article>
+
+<!-- CARD -->
+<article class="card reveal d1 rounded-3xl overflow-hidden bg-[#0B0B0B] text-white flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img
+          src="yaz.jpg"
+          alt="Иностранные языки"
+        >
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FFD400] text-black font-semibold">Языки</span>
+</div>
+<div class="p-7 flex flex-col flex-1">
+<h3 class="ff font-black text-2xl mb-3">Иностранные языки</h3>
+<p class="text-white/70 mb-5 leading-relaxed">Разговорная практика, грамматика и развитие навыков для учёбы, работы и путешествий.</p>
+<ul class="space-y-2 mb-6">
+<li>✓ Групповые занятия</li>
+<li>✓ Разговорная практика</li>
+<li>✓ Офлайн</li>
+<li>✓ Определение уровня</li>
+</ul>
+<div class="mt-auto border-t border-white/20 pt-5 mb-5 flex justify-between">
+<span>◷ 2–4 месяца</span><b>По запросу</b>
+</div>
+<a href="#contacts" class="btn text-center py-3 rounded-full bg-[#FFD400] text-black font-semibold">Записаться</a>
+</div>
+</article>
+
+<!-- CARD -->
+<article class="card reveal d2 rounded-3xl overflow-hidden border border-black/10 flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img
+          src="dop.jpg"
+          alt="Допольнительное образование"
+        >
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FFD400] font-semibold">Навыки</span>
+</div>
+<div class="p-7 flex flex-col flex-1">
+<h3 class="ff font-black text-2xl mb-3">Дополнительное образование</h3>
+<p class="text-gray-600 mb-5 leading-relaxed">Развитие современных навыков, которые помогают уверенно двигаться к новым целям.</p>
+<ul class="space-y-2 mb-6">
+<li>✓ Практический формат</li>
+<li>✓ Актуальные материалы</li>
+<li>✓ Проектные задания</li>
+<li>✓ Обратная связь</li>
+</ul>
+<div class="mt-auto border-t pt-5 mb-5 flex justify-between">
+<span>◷ Индивидуально</span><b>По запросу</b>
+</div>
+<a href="#contacts" class="btn text-center py-3 rounded-full bg-[#FFD400] font-semibold">Подробнее</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- FORMAT -->
+<section id="format" class="py-24 bg-[#F5F5F5] relative overflow-hidden">
+<div class="grid absolute inset-0 pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+
+<div class="text-center max-w-2xl mx-auto mb-14 reveal">
+<p class="text-[#C9A800] uppercase tracking-[.25em] font-semibold mb-3">Формат</p>
+<h2 class="ff font-black text-4xl md:text-5xl mb-4">Учитесь так, как удобно вам</h2>
+<p class="text-gray-600">Выбирайте формат обучения в зависимости от вашего графика и целей.</p>
+</div>
+
+
+
+<article class="reveal d1 rounded-3xl p-8 lg:p-10 bg-white border border-black/10">
+<div class="w-14 h-14 rounded-2xl bg-black  hover: box-shadow:0 30px 55px rgb(234, 203, 4) flex items-center justify-center mb-6">
+<i data-lucide="school" class="text-[#FFD400]"></i>
+</div>
+<h3 class="ff font-black text-3xl mb-3">Офлайн</h3>
+<p class="text-gray-600 mb-6 ">Живое общение с преподавателем и полноценная учебная атмосфера.</p>
+<ul class="space-y-3">
+<li>→ Занятия в центре</li>
+<li>→ Живое общение</li>
+<li>→ Работа в группе</li>
+</ul>
+</article>
+
+</div>
+</div>
+</section>
+<!-- TEACHERS -->
+<section id="pre" class="py-24">
+<div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+<div class="max-w-2xl mb-14 reveal">
+<p class="text-[#C9A800] uppercase tracking-[.25em] font-semibold mb-3">Преподаватели>
+<h2 class="ff font-Sblack text-4xl md:text-5xl mb-4">Выберите своего преподавателя</h2>
+<p class="text-gray-600 leading-relaxed">Хороший преподаватель-путь к успеху.</p>
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- CARD -->
+<article class="card reveal rounded-3xl overflow-hidden border border-black/10 flex flex-col">
+<div class="relative h-61 overflow-hidden">
+<img
+          src="pre 1.jpg"
+          alt="Подготовка к экзаменам"
+        >
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FFD400] font-semibold">Директор</span>
+</div>
+<div class="p-7 flex flex-col flex-1">
+<h3 class="ff font-black text-2xl mb-3">Турдиев Дастан</h3>
+<p class="text-gray-600 mb-5 leading-relaxed">Директор образовательного центра "Гамма" .</p>
+
+
+<a href="#contacts" class="btn text-center py-3 rounded-full bg-[#FFD400] font-semibold">Узнать подробнее</a>
+</div>
+</article>
+
+<!-- CARD -->
+<article class="card reveal d1 rounded-3xl overflow-hidden bg-[#0B0B0B] text-white flex flex-col">
+<div class="relative h-86 overflow-hidden">
+<img
+          src="pre 2.jpg"
+          alt="Иностранные языки"
+        >
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FFD400] text-black font-semibold">Математика</span>
+</div>
+<div class="p-7 flex flex-col flex-1">
+<h3 class="ff font-black text-2xl mb-3">Рахматилло уулу Шайлообек
+  Абдукарим кызы Айсалкын
+</h3>
+<p class="text-white/70 mb-5 leading-relaxed">Каждая решённая задача-маленькая победа.</p>
+
+
+<a href="#contacts" class="btn text-center py-3 rounded-full bg-[#FFD400] text-black font-semibold">Подробнее</a>
+</div>
+</article>
+
+<!-- CARD -->
+<article class="card reveal d2 rounded-3xl overflow-hidden border border-black/10 flex flex-col">
+<div class="relative h-86 overflow-hidden">
+<img
+          src="pre 3.jpg"
+          alt="Допольнительное образование"
+        >
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FFD400] font-semibold">Кыргызский язык</span>
+</div>
+<div class="p-7 flex flex-col flex-1">
+<h3 class="ff font-black text-2xl mb-3">Замирбек кызы Мырзагул
+  Бабырбек уулу Бексултан
+</h3>
+<p class="text-gray-600 mb-5 leading-relaxed">Знания языка открывает новые возсожности.</p>
+
+
+<a href="#contacts" class="btn text-center py-3 rounded-full bg-[#FFD400] font-semibold">Подробнее</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="py-24">
+<div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-3 gap-12">
+
+<div class="reveal lg:sticky lg:top-28 self-start">
+<p class="text-[#C9A800] uppercase tracking-[.25em] font-semibold mb-3">Наш подход</p>
+<h2 class="ff font-black text-4xl md:text-5xl mb-4">Почему GAMMA?</h2>
+<p class="text-gray-600 mb-6">Создаём обучение, которое помогает не просто получить знания, а применять их на практике.</p>
+<div class="stripe h-3 w-40 rounded-full"></div>
+</div>
+
+<div class="lg:col-span-2 grid sm:grid-cols-2 gap-5">
+
+<div class="card reveal rounded-2xl p-6 border">
+<i data-lucide="award"></i>
+<h3 class="font-bold text-xl mt-4 mb-2">Опытные преподаватели</h3>
+<p class="text-gray-600">Помогаем разобраться в материале и применять знания на практике.</p>
+</div>
+
+<div class="card reveal d1 rounded-2xl p-6 border">
+<i data-lucide="users"></i>
+<h3 class="font-bold text-xl mt-4 mb-2">Внимание к ученику</h3>
+<p class="text-gray-600">Учитываем уровень подготовки и цели каждого ученика.</p>
+</div>
+
+<div class="card reveal rounded-2xl p-6 border">
+<i data-lucide="clipboard-check"></i>
+<h3 class="font-bold text-xl mt-4 mb-2">Понятная система</h3>
+<p class="text-gray-600">Обучение построено последовательно — от основ к практике.</p>
+</div>
+
+<div class="card reveal d1 rounded-2xl p-6 border">
+<i data-lucide="bar-chart-3"></i>
+<h3 class="font-bold text-xl mt-4 mb-2">Контроль прогресса</h3>
+<p class="text-gray-600">Регулярно отслеживаем результаты обучения.</p>
+</div>
+
+<div class="card reveal rounded-2xl p-6 border">
+<i data-lucide="book-open"></i>
+<h3 class="font-bold text-xl mt-4 mb-2">Современные материалы</h3>
+<p class="text-gray-600">Используем актуальные материалы и практические задания.</p>
+</div>
+
+<div class="card reveal d1 rounded-2xl p-6 border">
+<i data-lucide="wallet"></i>
+<h3 class="font-bold text-xl mt-4 mb-2">Удобные условия</h3>
+<p class="text-gray-600">Подбираем подходящий формат и график обучения.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- STEPS -->
+<section id="steps" class="py-24 bg-[#0B0B0B] text-white">
+<div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+<div class="max-w-2xl mb-14 reveal">
+<p class="text-[#FFD400] uppercase tracking-[.25em] font-semibold mb-3">Старт</p>
+<h2 class="ff font-black text-4xl md:text-5xl">Как начать обучение</h2>
+</div>
+
+<ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+<li class="reveal rounded-2xl p-7 bg-white/5 border border-white/10">
+<span class="ff font-black text-5xl text-[#FFD400]">01</span>
+<h3 class="font-bold text-xl mt-4 mb-2">Оставьте заявку</h3>
+<p class="text-white/60">Свяжитесь с нами по телефону или WhatsApp.</p>
+</li>
+
+<li class="reveal d1 rounded-2xl p-7 bg-white/5 border border-white/10">
+<span class="ff font-black text-5xl text-[#FFD400]">02</span>
+<h3 class="font-bold text-xl mt-4 mb-2">Определим цель</h3>
+<p class="text-white/60">Обсудим задачи, уровень подготовки и желаемый результат.</p>
+</li>
+
+<li class="reveal d2 rounded-2xl p-7 bg-white/5 border border-white/10">
+<span class="ff font-black text-5xl text-[#FFD400]">03</span>
+<h3 class="font-bold text-xl mt-4 mb-2">Подберём программу</h3>
+<p class="text-white/60">Выберем курс, формат и график.</p>
+</li>
+
+<li class="reveal d3 rounded-2xl p-7 bg-white/5 border border-white/10">
+<span class="ff font-black text-5xl text-[#FFD400]">04</span>
+<h3 class="font-bold text-xl mt-4 mb-2">Начинайте учиться</h3>
+<p class="text-white/60">Получайте знания, практикуйте навыки и отслеживайте прогресс.</p>
+</li>
+
+</ol>
+</div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts" class="py-24">
+<div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-10">
+
+<div class="reveal">
+<p class="text-[#C9A800] uppercase tracking-[.25em] font-semibold mb-3">Контакты</p>
+<h2 class="ff font-black text-4xl md:text-5xl mb-8">Давайте начнём</h2>
+
+<ul class="space-y-6">
+
+<li class="flex gap-4">
+<span class="w-12 h-12 rounded-xl bg-[#FFD400] flex items-center justify-center shrink-0"><i data-lucide="map-pin"></i></span>
+<div><b>Адрес</b><p class="text-gray-600">г.Манас,ул.Курманбек Баатыр,104</p></div>
+</li>
+
+<li class="flex gap-4">
+<span class="w-12 h-12 rounded-xl bg-[#FFD400] flex items-center justify-center shrink-0"><i data-lucide="phone"></i></span>
+<div><b>Телефон</b><a class="block hover:underline" href="tel:+996773440040">+996 773 440 040</a></div>
+</li>
+
+<li class="flex gap-4">
+<span class="w-12 h-12 rounded-xl bg-[#FFD400] flex items-center justify-center shrink-0"><i data-lucide="instagram"></i></span>
+<div><b>instagram</b><a class="block hover:underline" href="mailto:@gamma_jalalabad">@gamma_jalalabad</a></div>
+</li>
+
+<li class="flex gap-4">
+<span class="w-12 h-12 rounded-xl bg-[#FFD400] flex items-center justify-center shrink-0"><i data-lucide="calendar-clock"></i></span>
+<div><b>Режим работы</b><p class="text-gray-600">Пн–Сб: 08:00–17:00</p></div>
+</li>
+
+</ul>
+</div>
+
+<div class="reveal d1 rounded-3xl p-10 lg:p-12 bg-[#FFD400] hover:shadow-[0_10px_45px_-25px_red] flex flex-col justify-center transition-shadow duration-300">
+  <h3 class="ff font-black text-3xl md:text-4xl mb-4">Хотите узнать больше?</h3>
+  <p class="leading-relaxed mb-8">Позвоните нам или напишите в WhatsApp. Расскажем о программах, расписании и условиях.</p>
+  <div class="flex flex-wrap gap-4">
+    <a href="https://instagram.com" class="px-7 py-4 rounded-full bg-black text-white font-semibold hover:bg-[yellow] hover:text-black">Direct</a>
+    <a href="https://wa.me" target="_blank" rel="noopener" class="px-7 py-4 rounded-full border-2 border-black font-semibold hover:bg-[#20F736] hover:text-white">WhatsApp</a>
+  </div>
+</div>
+
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-[#0B0B0B] text-white pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+<div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="w-11 h-11 rounded-xl bg-[#FFD400]  flex items-center justify-center"><img
+          src="logo.svg"
+        ></span>
+<b class="ff text-xl">GAMMA</b>
+</div>
+<p class="text-white/60 leading-relaxed">Центр образования, где знания превращаются в практические навыки и новые возможности.</p>
+</div>
+
+<div>
+<h2 class="font-bold mb-4">Разделы</h2>
+<ul class="space-y-2 text-white/70">
+<li><a href="#programs" class="left:0;bottom:-6px;width:0;height:2px;background:var(--y);transition:.3s .nav:hover:afterwidth:100%" >Программы</a></li>
+<li><a href="#format">Формат обучения</a></li>
+<li><a href="#pre">Наши преподаватели</a></li>
+<li><a href="#why">Почему мы</a></li>
+<li><a href="#contacts">Контакты</a></li>
+</ul>
+</div>
+
+<div>
+<h2 class="font-bold mb-4">Мы в соцсетях</h2>
+<div class="flex gap-3">
+
+<a href="https://www.instagram.com/gamma_jalalabad?stkn=MTVrdXJ6ZjJ3ODZuOA=="
+   target="_blank"
+   rel="noopener noreferrer"
+   class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[white] hover:text-white">
+    <img
+        src="instagram.png"
+        alt="WhatsApp"
+        class="w-6 h-6"
+    >
+</a>
+<a href="t.me/results_gamma_zhalalabad"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#FFD400] hover:text-white">
+    <img
+        src="telegram.png"
+        alt="WhatsApp"
+        class="w-6 h-6"
+    >
+</a>
+<a href="https://wa.me/message/6XAZSG345FVCC1"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#C1F7B0] hover:text-white">
+    <img
+        src="whatsapp.png"
+        alt="WhatsApp"
+        class="w-6 h-6"
+    >
+</a>
+
+
+</div>
+</div>
+
+</div>
+
+<p class="pt-8 text-center text-white/40">© 2026 Центр Образования GAMMA. Все права защищены.</p>
+</div>
+</footer>
+
+</div>
+
+<script>
+lucide.createIcons();
+
+const header=document.getElementById("header");
+const mobile=document.getElementById("mobile");
+const burger=document.getElementById("burger");
+
+function scrollHeader(){
+header.classList.toggle("header-solid",window.scrollY>40);
+}
+window.addEventListener("scroll",scrollHeader,{passive:true});
+scrollHeader();
+
+burger.addEventListener("click",()=>{
+const open=mobile.classList.contains("hidden");
+mobile.classList.toggle("hidden",!open);
+burger.setAttribute("aria-expanded",open);
+header.classList.add("header-solid");
+});
+
+document.querySelectorAll("#mobile a").forEach(a=>{
+a.addEventListener("click",()=>{
+mobile.classList.add("hidden");
+burger.setAttribute("aria-expanded","false");
+scrollHeader();
+});
+});
+
+const items=document.querySelectorAll(".reveal");
+
+if("IntersectionObserver" in window){
+const io=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add("in");
+io.unobserve(e.target);
+}
+});
+},{threshold:.12});
+items.forEach(el=>io.observe(el));
+}else{
+items.forEach(el=>el.classList.add("in"));
+}
+
+window.addEventListener("resize",()=>{
+if(window.innerWidth>=1024){
+mobile.classList.add("hidden");
+burger.setAttribute("aria-expanded","false");
+}
+});
+</script>
+
+</body>
+</html>
